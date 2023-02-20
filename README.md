@@ -1,6 +1,15 @@
 # BostonOptics (E-Commerce)
 A Sample N-layered .NET Core Project Demonstrating Clean Architecture and the Generic Repository Pattern.
 
+## Migrations
+
+### Infrastructure
+Firstly, set the project "Web" as startup project.
+Secondly, choose Infrastructure on Package Manager Console.
+```
+Add-Migration InitialCreate -context ShopContext -o Data/Migrations
+Update-Database -context ShopContext
+```
 ## Packages Installed
 
 ### Infrastructure
