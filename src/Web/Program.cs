@@ -6,6 +6,8 @@ global using ApplicationCore.Interfaces;
 global using ApplicationCore.Entities;
 using Web.Interfaces;
 using Web.Services;
+using Microsoft.AspNetCore.Localization;
+using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,7 +42,7 @@ else
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.UseRequestLocalization("en-US");
 app.UseRouting();
 
 app.UseAuthentication();
